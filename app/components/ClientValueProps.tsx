@@ -104,8 +104,8 @@ export default function ClientValueProps() {
               animate={heroInView ? "visible" : "hidden"}
               custom={0.12}
             >
-              How can you {" "}
-              <span className="text-magenta italic">do more?</span>
+              Due diligence {" "}
+              <span className="text-verified italic">guaranteed.</span>
             </motion.h2>
           </div>
 
@@ -118,7 +118,7 @@ export default function ClientValueProps() {
             <VideoPlaceholder
               name="Fred Persia"
               title="CEO, ComplianceSync"
-              quote="The best insurance policy is the one you never have to look for."
+              quote="You can outsource the work, but you cannot outsource the risk..."
               youtubeId="NpRwIOI4jlM"
             />
           </motion.div>

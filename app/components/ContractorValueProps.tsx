@@ -119,7 +119,7 @@ export default function ContractorValueProps() {
               <VideoPlaceholder
                 name="Dave Forbes"
                 title="COO, ComplianceSync"
-                quote="Your qualifications speak for themselves. Let's make them visible."
+                quote="Your qualifications speak for themselves. Let's stay one step ahead."
                 youtubeId="hweqHCYRQlo"
               />
             </motion.div>

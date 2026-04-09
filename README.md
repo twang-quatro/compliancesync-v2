@@ -12,8 +12,8 @@
 | `/` | Home |
 | `/about` | About Us |
 | `/services` | Our Services |
-| `/clients` | For Hiring Clients |
-| `/contractors` | For Contractors |
+| `/clients` | Hiring Clients |
+| `/contractors` | Contractors |
 | `/resources` | Member Resources |
 | `/contact` | Contact Us |
 

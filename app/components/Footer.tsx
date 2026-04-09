@@ -14,8 +14,8 @@ const navColumns: NavColumn[] = [
   {
     heading: "Platform",
     links: [
-      { label: "For Hiring Clients", href: "/clients" },
-      { label: "For Contractors", href: "/contractors" },
+      { label: "Hiring Clients", href: "/clients" },
+      { label: "Contractors", href: "/contractors" },
       { label: "Contact", href: "/contact" },
     ],
   },

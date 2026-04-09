@@ -92,7 +92,7 @@ export default function HeroHome() {
             href="/contractors"
             className="px-8 py-4 border border-cs-blue/50 text-cs-blue text-[11px] uppercase tracking-[0.18em] font-sans font-extrabold hover:border-cs-blue hover:bg-cs-blue/10 transition-all duration-300"
           >
-            For Contractors
+            Contractors
           </Link>
           <Link
             href="https://www.compliancesync.com/members/Registration/CreateAccount.aspx"

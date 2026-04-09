@@ -78,8 +78,8 @@ public/
 |-------|-------------|
 | `/` | Homepage — hero, trust stats, values, how it works, CTA |
 | `/about` | About — founder video, mission statements, legal definitions, takeaways |
-| `/clients` | For Hiring Clients — 11 reasons, video, benefits |
-| `/contractors` | For Contractors — 11 reasons, video, benefits |
+| `/clients` | Hiring Clients — 11 reasons, video, benefits |
+| `/contractors` | Contractors — 11 reasons, video, benefits |
 | `/contact` | Contact form (not yet wired to backend) + company details |
 | `/member-resources` | 7 accordion sections with external resource links |
 

@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const links = [
   { label: "About", href: "/about" },
-  { label: "For Clients", href: "/clients" },
-  { label: "For Contractors", href: "/contractors" },
+  { label: "Hiring Clients", href: "/clients" },
+  { label: "Contractors", href: "/contractors" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -77,7 +77,7 @@ export default function Navbar() {
               onClick={() => setMemberOpen(!memberOpen)}
               className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy transition-colors duration-300 font-sans"
             >
-              Member Login
+              Login
               <span className={`transition-transform duration-200 text-[8px] ${memberOpen ? "rotate-180" : ""}`}>▾</span>
             </button>
             {memberOpen && (
@@ -89,7 +89,7 @@ export default function Navbar() {
                   onClick={() => setMemberOpen(false)}
                   className="block px-5 py-3 text-[10px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy hover:bg-black/3 transition-colors duration-200 font-sans"
                 >
-                  Portal Login
+                  Account Login
                 </a>
                 <Link
                   href="/member-resources"
