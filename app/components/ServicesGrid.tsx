@@ -65,7 +65,7 @@ const dashboards = [
 ];
 
 const audienceLabel: Record<string, string> = {
-  clients: "For Clients",
+  clients: "For Hiring Clients",
   contractors: "For Contractors",
   both: "Platform-Wide",
 };

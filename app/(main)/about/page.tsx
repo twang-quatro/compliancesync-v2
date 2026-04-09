@@ -19,7 +19,7 @@ export default function AboutPage() {
         headline={
           <>
             Due Diligence{" "}
-            <span className="italic">made easy.</span>
+            <span className="text-verified italic">made easy.</span>
           </>
         }
         accent="blue"

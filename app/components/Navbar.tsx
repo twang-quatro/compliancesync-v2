@@ -83,7 +83,7 @@ export default function Navbar() {
             {memberOpen && (
               <div className="absolute top-full right-0 mt-3 w-48 bg-white border border-black/8 shadow-lg py-2 z-50">
                 <a
-                  href="https://compliancesync.com/members/Login.aspx"
+                  href="https://www.compliancesync.com/members/Login.aspx"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setMemberOpen(false)}
@@ -155,7 +155,7 @@ export default function Navbar() {
           ))}
           <li className="pt-6 border-t border-black/10 flex flex-col gap-4">
             <a
-              href="https://compliancesync.com/members/Login.aspx"
+              href="https://www.compliancesync.com/members/Login.aspx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[12px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy transition-colors font-sans"

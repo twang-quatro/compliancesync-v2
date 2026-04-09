@@ -104,8 +104,8 @@ export default function ClientValueProps() {
               animate={heroInView ? "visible" : "hidden"}
               custom={0.12}
             >
-              Let&rsquo;s turn it up to{" "}
-              <span className="text-magenta italic">eleven!</span>
+              How can you {" "}
+              <span className="text-magenta italic">do more?</span>
             </motion.h2>
           </div>
 

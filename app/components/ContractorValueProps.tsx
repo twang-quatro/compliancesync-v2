@@ -105,8 +105,8 @@ export default function ContractorValueProps() {
                 animate={heroInView ? "visible" : "hidden"}
                 custom={0.12}
               >
-                Your advantage,{" "}
-                <span className="text-verified italic">verified.</span>
+                Your qualifications {" "}
+                <span className="text-verified italic">working for you.</span>
               </motion.h2>
             </div>
 

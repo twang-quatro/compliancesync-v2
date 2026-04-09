@@ -3,7 +3,7 @@
 **Prepared by:** Ultra Creative House (Jordan Flis)
 **Date:** April 2, 2026
 **Repo:** https://github.com/jordanflis/compliancesync-v2
-**Live:** https://compliance-sync-v2.vercel.app
+**Live:** https://www.compliance-sync-v2.vercel.app
 
 ---
 

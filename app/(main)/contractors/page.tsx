@@ -41,7 +41,7 @@ export default function ContractorsPage() {
               Register Now
             </Link>
             <Link
-              href="https://www.compliancesync.com/members/Registration/CreateAccount.aspx"
+              href="https://www.compliancesync.com/members/login.aspx"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-verified text-cream text-[11px] uppercase tracking-[0.18em] font-sans font-extrabold hover:opacity-90 transition-opacity duration-300"

@@ -18,7 +18,7 @@ export default function CTABanner({
   headline = "Ready to establish due diligence?",
   subhead = "Join the contractor verification community trusted by hiring organizations across Canada.",
   primaryLabel = "Register Now",
-  primaryHref = "https://www.compliancesync.com/members/Registration/CreateAccount.aspx",
+  primaryHref = "https://www.compliancesync.com/members/login.aspx",
   secondaryLabel = "Contact Us",
   secondaryHref = "/contact",
   variant = "dark",

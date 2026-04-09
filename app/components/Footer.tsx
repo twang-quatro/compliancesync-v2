@@ -14,7 +14,7 @@ const navColumns: NavColumn[] = [
   {
     heading: "Platform",
     links: [
-      { label: "For Clients", href: "/clients" },
+      { label: "For Hiring Clients", href: "/clients" },
       { label: "For Contractors", href: "/contractors" },
       { label: "Contact", href: "/contact" },
     ],
@@ -24,7 +24,7 @@ const navColumns: NavColumn[] = [
     links: [
       {
         label: "Portal Login",
-        href: "https://compliancesync.com/members/Login.aspx",
+        href: "https://www.compliancesync.com/members/Login.aspx",
         external: true,
       },
       {
