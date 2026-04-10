@@ -1,31 +1,20 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const links = [
   { label: "About", href: "/about" },
   { label: "Hiring Clients", href: "/clients" },
-  { label: "Contractors", href: "/contractors" },
+  { label: "For Contractors", href: "/contractors" },
+  { label: "Resources", href: "/member-resources" },
   { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [memberOpen, setMemberOpen] = useState(false);
-  const memberRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent) {
-      if (memberRef.current && !memberRef.current.contains(e.target as Node)) {
-        setMemberOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -71,36 +60,14 @@ export default function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden xl:flex items-center gap-6">
-          {/* Member Login dropdown */}
-          <div ref={memberRef} className="relative">
-            <button
-              onClick={() => setMemberOpen(!memberOpen)}
-              className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy transition-colors duration-300 font-sans"
-            >
-              Login
-              <span className={`transition-transform duration-200 text-[8px] ${memberOpen ? "rotate-180" : ""}`}>▾</span>
-            </button>
-            {memberOpen && (
-              <div className="absolute top-full right-0 mt-3 w-48 bg-white border border-black/8 shadow-lg py-2 z-50">
-                <a
-                  href="https://www.compliancesync.com/members/Login.aspx"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setMemberOpen(false)}
-                  className="block px-5 py-3 text-[10px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy hover:bg-black/3 transition-colors duration-200 font-sans"
-                >
-                  Account Login
-                </a>
-                <Link
-                  href="/member-resources"
-                  onClick={() => setMemberOpen(false)}
-                  className="block px-5 py-3 text-[10px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy hover:bg-black/3 transition-colors duration-200 font-sans"
-                >
-                  Member Resources
-                </Link>
-              </div>
-            )}
-          </div>
+          <a
+            href="https://www.compliancesync.com/members/Login.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] uppercase tracking-[0.15em] text-[#8AC43E] hover:text-[#6a9a2e] transition-colors duration-300 font-sans font-semibold"
+          >
+            Login
+          </a>
           <Link
             href="https://www.compliancesync.com/members/Registration/CreateAccount.aspx"
             target="_blank"
@@ -158,17 +125,10 @@ export default function Navbar() {
               href="https://www.compliancesync.com/members/Login.aspx"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[12px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy transition-colors font-sans"
+              className="text-[12px] uppercase tracking-[0.15em] text-[#8AC43E] hover:text-[#6a9a2e] transition-colors font-sans font-semibold"
             >
-              Portal Login
+              Login
             </a>
-            <Link
-              href="/member-resources"
-              onClick={() => setMenuOpen(false)}
-              className="text-[12px] uppercase tracking-[0.15em] text-navy/60 hover:text-navy transition-colors font-sans"
-            >
-              Member Resources
-            </Link>
             <Link
               href="https://www.compliancesync.com/members/Registration/CreateAccount.aspx"
               target="_blank"
