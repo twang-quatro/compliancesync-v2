@@ -36,13 +36,36 @@ const fadeUp = {
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((r) => setTimeout(r, 800));
-    setLoading(false);
-    setSubmitted(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "8ff2aeb2-b98f-4a55-b224-8678c788ef10");
+    formData.append("subject", "New ComplianceSync Contact Form Submission");
+    formData.append("from_name", "ComplianceSync Website");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError(data.message ?? "Something went wrong. Please try again or call us directly.");
+      }
+    } catch {
+      setError("Unable to send your message. Please try again or call us directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -118,6 +141,16 @@ export default function ContactSection() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-7">
+                  {/* Honeypot — hidden from humans, bots fill it */}
+                  <input
+                    type="checkbox"
+                    name="botcheck"
+                    className="hidden"
+                    style={{ display: "none" }}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+
                   <div className="flex flex-col gap-3">
                     <p className="text-[10px] uppercase tracking-[0.22em] text-navy/50 font-sans">
                       Quick Inquiry
@@ -213,6 +246,12 @@ export default function ContactSection() {
                       placeholder="Tell us how we can help..."
                     />
                   </div>
+
+                  {error && (
+                    <p className="text-[12px] text-magenta font-sans border-l-2 border-magenta/60 pl-4">
+                      {error}
+                    </p>
+                  )}
 
                   <button
                     type="submit"
